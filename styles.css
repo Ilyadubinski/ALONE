@@ -4,5 +4,18 @@ body {
   margin: 0;
   /* background: black; */
   overflow: hidden;
+  position: relative;
+}
+/* .song-button {
+  background-color: red;
+  opacity: 100;
 }
 
+.song {
+  position: relative;
+  z-index: 1;
+  background-color:transparent;
+  opacity: 100;
+} */
+
+audio { display:none;}
