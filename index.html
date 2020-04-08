@@ -43,15 +43,34 @@
     <!-- <iframe class="audio" loop autoplay="autoplay" controls="controls" >
         <source src="alone.mp3"/>
         
-    </iframe>
-    -->
+    </iframe> -->
+   
         
-    <audio controls style="display:none" id="audio">
-        <source src="psycho.mp3" type="audio/mpeg">
+    <audio muted autoplay loop id="myaudio" style="display: none">
+        <source src="psycho.mp3" type="audio/mpeg" >
        
     </audio>
     <script>
-        document.getElementById('audio').play();
+        var audio = document.getElementById('myaudio');
+            var T1 = 3e3; // / If polling, this time must be longer than the length of the audio. In the case of webscoket, a status play should be set to avoid repetition, as follows:
+            var T2 = 211000; // Audio length to ensure full playback to users
+            var play = false;
+            function run() {
+                if (play) {
+                    return false;
+                }
+                audio.currentTime = 0; // Sets the start time of the playing audio
+                audio.volume = 0.9; // Set the sound size of the audio
+                audio.muted = false; // Turn off silent state
+                play = true;
+                setTimeout(function () {
+                    play = false;
+                    audio.muted = true; // After playing, turn on the mute state
+                }, T2);
+            }
+            setInterval(function () {
+                run(); // pretend to be polling server or pull data from websocket
+            }, T1);
     </script>
 </body>
 
