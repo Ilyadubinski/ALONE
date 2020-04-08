@@ -52,7 +52,7 @@
     </audio>
     <script>
         var audio = document.getElementById('myaudio');
-            var T1 = 3e3; // / If polling, this time must be longer than the length of the audio. In the case of webscoket, a status play should be set to avoid repetition, as follows:
+            var T1 = 1e3; // / If polling, this time must be longer than the length of the audio. In the case of webscoket, a status play should be set to avoid repetition, as follows:
             var T2 = 211000; // Audio length to ensure full playback to users
             var play = false;
             function run() {
