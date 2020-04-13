@@ -4,6 +4,7 @@
 <head>
     <meta charset=UTF-8 />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="playpausbutton.scss" />
     <!-- <link type="text/css" href="/skin/pink.flag/jplayer.pink.flag.css" rel="stylesheet" />
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/jquery.jplayer.min.js"></script> -->
@@ -20,6 +21,39 @@
     <!-- <div class="logo"><a class="alive" href="index.html" style="text-decoration: none;">ARISE</a></div>
     <div class="logo"><a class='portal'href="spacecloud.html" style="text-decoration: none;">ALIVE</a></div>
     <div class="logo"><a class="portal" href="portal.html" style="text-decoration: none;">AWAKE</a></div> -->
+
+    <audio id="track">
+        <source src="inmyroom.mp3" type="audio/mpeg" />
+    </audio>
+    
+    <div id="player-container">
+        <div id="play-pause" class="play">Play</div>
+    </div>
+
+
+    
+    <script>
+        var track = document.getElementById('track');
+
+            var controlBtn = document.getElementById('play-pause');
+
+            function playPause() {
+                if (track.paused) {
+                    track.play();
+                    //controlBtn.textContent = "Pause";
+                    controlBtn.className = "pause";
+                } else {
+                    track.pause();
+                    //controlBtn.textContent = "Play";
+                    controlBtn.className = "play";
+                }
+            }
+
+            controlBtn.addEventListener("click", playPause);
+            track.addEventListener("ended", function () {
+                controlBtn.className = "play";
+            });
+    </script>
    
     <script src="js/three.min.js"></script>
     <script>
@@ -133,8 +167,9 @@
         }
         window.addEventListener('resize', onWindowResize, false);
         init();
+        
     </script>
-
+    
 
 </body>
 
