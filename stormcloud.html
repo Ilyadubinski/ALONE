@@ -23,14 +23,43 @@
     <div class="logo"><a class="portal" href="portal.html" style="text-decoration: none;">AWAKE</a></div> -->
 
     <audio id="track">
-        <source src="inmyroom.mp3" type="audio/mpeg" />
+        <source src="moonriver(rain).mp3" type="audio/mpeg" />
     </audio>
     
     <div id="player-container">
         <div id="play-pause" class="play">Play</div>
     </div>
 
+    <div id='back-container'>
+        <a id="back" href="javascript:history.back()" style="text-decoration: none;">Back</a>
+    </div>
+    <div id='forward-container'>
+        <a id="forward" href="portal.html" style="text-decoration: none;">Back</a>
+    </div>
 
+    <div id='home-container'>
+        <a id="home" href="index.html" style="text-decoration: none;">Home</a>
+    </div>
+
+
+    <div class='about-container'>
+        <a class="modal-open" href="#modal">?</a>
+
+    </div>
+
+    <div class="all-modal-stylying">
+    
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <a href="#" class="modal-close" title="Close Modal">X</a>
+                <h3>ALONE</h3>
+                <div class="modal-area">
+                    <p>If numbness were a feeling</p>
+                </div>
+            </div>
+        </div>
+    
+    </div>
     
     <script>
         var track = document.getElementById('track');
