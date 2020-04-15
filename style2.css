@@ -126,39 +126,9 @@ player {
   background-image: url("http://basichow.com/asserts/images/pause.png") !important;
 }
 
-#back-container #back {
-      position: absolute;
-    top: 10px;
-    right: 40px;
-  position: absolute;
-  cursor: pointer;
-  text-indent: -999999px;
-  height: 40px;
-  width: 40px;
-  background: transparent;
-  background-image: url("arrow-88-16.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px;
-  /* align-self: start; */
-}
 
-#forward-container #forward {
-      position: absolute;
-    top: 10px;
-    right: 20px;
-  position: absolute;
-  cursor: pointer;
-  text-indent: -999999px;
-  height: 40px;
-  width: 40px;
-  background: transparent;
-  background-image: url("forward.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px;
-  /* align-self: start; */
-}
+
+
 
 @import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700italic,700);
 @import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
@@ -175,24 +145,7 @@ p {
   margin-bottom:1em;
 }
 
-a.modal-open {
-  top: 10px;
-    right: 40px;
-    position: absolute;
-  /* display:block; */
-  /* padding:20px; */
-  color: white;
-  font-weight: bolder;
-  /* font-weight:bold; */
-  /* margin:50px auto; */
-  /* width:200px; */
-  /* background:#e0e0e0; */
-  /* border-radius:2px; */
-  /* text-align:center; */
-  text-decoration:none;
-  font-size: 35px;
 
-}
 .modal {
   
   background:rgba(0,0,0,0.7);
@@ -287,20 +240,218 @@ a.modal-open {
   position: absolute;
 }
 
+
+
+
+
+
+
+
+
+
+
+.about-container a:hover {
+    color: rgb(21, 252, 232);
+}
+
+#home-container #home:hover {
+    color: rgb(21, 252, 232); 
+}
+
+#back-container #back:hover {
+    color: rgb(21, 252, 232); 
+}
+
+#player-container .play:hover {
+    color: rgb(21, 252, 232); 
+}
+
+#forward-container #forward:hover {
+    color: rgb(21, 252, 232); 
+}
+
+#back-container #back {
+    position: absolute;
+    top: 10px;
+    right: 200px;
+  position: absolute;
+  /* cursor: pointer; */
+  /* text-decoration:none; */
+  font-size: 35px;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  /* text-decoration:none; */
+  font-size: 30px;
+  
+}
+
+
+
+#forward-container #forward {
+      position: absolute;
+    top: 10px;
+    right: 20px;
+  position: absolute;
+  cursor: pointer;
+  text-decoration:none;
+  font-size: 35px;
+  color: white;
+  font-family: "Quicksand", sans-serif;
+  text-decoration:none;
+  font-size: 30px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700italic,700);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+.all-modal-stylying {
+  padding:0;
+  margin:0;
+  position:relative;
+  box-sizing:border-box; 
+  -webkit-font-smoothing: subpixel-antialiased !important; 
+  -webkit-backface-visibility: hidden; 
+}
+
+p {
+  margin-bottom:1em;
+}
+
+a.modal-open {
+  top: 10px;
+   
+    position: absolute;
+  /* display:block; */
+  /* padding:20px; */
+  color: white;
+  /* font-weight: bolder; */
+  /* font-weight:bold; */
+  /* margin:50px auto; */
+  /* width:200px; */
+  /* background:#e0e0e0; */
+  /* border-radius:2px; */
+  /* text-align:center; */
+  font-family: "Quicksand", sans-serif;
+  text-decoration:none;
+  font-size: 30px;
+
+}
+.modal {
+  
+  background:rgba(0,0,0,0.7);
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  bottom:0px;
+  transition:all .5s ease-in-out;
+  opacity:0;
+  z-index:-1;
+}
+.modal:target {
+  opacity:1;
+  transition:all .5s ease-in-out;
+  z-index:+1;
+}
+.modal-content {
+  position:fixed;
+  top:50%;
+  left:50%;
+  width:500px;
+  background:#fff;
+  border-radius:4px;
+  transform:translate(-50%, -200%);
+  transition:all .5s ease-in-out;
+  perspective: 1000;
+  outline:1px solid transparent;
+  opacity:0;
+}
+.modal:target .modal-content {
+  transform:translate(-50%, -50%);
+  transition:all .5s ease-in-out;
+  transition-delay:.5s;
+  z-index:9999;
+  opacity:1;
+}
+.modal-close {
+  float:right;
+  text-decoration:none;
+  /* padding:22px 22px; */
+  color:#424242;
+  font-weight:800;
+  transition:all .5s ease-in-out;
+  z-index:+1;
+  /* background:rgba(0,0,0,0.1); */
+  text-align:center;
+  border-radius:0 4px 0 0;
+}
+.modal-close:hover {
+  /* color:#fff;
+  background:rgba(0,0,0,0.5); */
+}
+.modal-content h3 {
+  
+  /* padding: 5px; */
+  display:block;
+  text-align:center;
+  /* border-bottom:1px solid #e0e0e0; */
+  text-transform:uppercase;
+  color:#424242;
+  font-weight: 900;
+  /* background:rgba(2,162,239,1); */
+  /* color:#fff; */
+  border-radius:4px 4px 0 0;
+}
+.modal-area {
+  padding:20px;
+  color:#424242;
+
+
+}
+
+.modal-area input[type="radio"] {
+  display:none;
+}
+.modal-area label {
+  float:left;
+  display:block;
+  padding:10px 20px;
+  font-weight:700;
+  cursor:pointer;
+  z-index:+2;
+  background:rgba(0,0,0,.3);
+  color:#fff;
+  transition:all .5s ease-in-out;
+}
+
+.about-container {
+  position: absolute;
+    top: 0px;
+    left: 300px;
+  position: absolute;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
 #home-container #home {
       position: absolute;
     top: 10px;
     left: 100px;
   position: absolute;
   cursor: pointer;
-  text-indent: -999999px;
+  /* text-indent: -999999px;
   height: 40px;
   width: 40px;
-  background: white;
-  background-image: url("https://img.icons8.com/wired/50/000000/home.png");
+  background: white; */
+  /* background-image: url("https://img.icons8.com/wired/50/000000/home.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 20px;
-  border-radius: 14em;
+  background-size: 20px; */
+  /* border-radius: 14em; */
   /* align-self: start; */
+    color: white;
+  /* font-weight: bolder; */
+  font-family: "Quicksand", sans-serif;
+  text-decoration:none;
+  font-size: 30px;
 }
