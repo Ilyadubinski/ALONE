@@ -4,8 +4,10 @@
 <head>
     <meta charset=UTF-8 />
     <link rel="stylesheet" type="text/css" href="styles.css" />
-   
-    
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
    
     <title>Alone</title>
 
@@ -16,44 +18,50 @@
 
 <body>
 
-    <!-- <audio id="track">
-        <source src="inmyroom.mp3" type="audio/mpeg" />
-    </audio>
-    
-    <div id="player-container">
-        <div id="play-pause" class="play">Play</div>
-    </div> -->
+   
     <div class='bodydouble'>
-        <!-- <audio id ='meow' controls>
-            <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/9473/new_year_dubstep_minimix.ogg" type="audio/ogg">
-            Your browser dose not Support the audio Tag
-        </audio>  -->
         <div class="neon2">
             <span class="text2" data-text="ALIVE" onclick="location='spacecloud.html'">ALIVE</span>
-     
         </div>
-        <div class='flux'>
-       
+        <div class='flux'>    
                 <span class="text2" data-text="ASPIRE" onclick="location='portal.html'">ASPIRE</span>
-     
         </div>
             <div class="neon2">
                 <span class="text2" data-text="ALONE" onclick="location='stormcloud.html'">ALONE</span>
             </div>
+        </div>
+    </div>
+    
+ 
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true" id="onload">
+    
+        <div class="modal-dialog">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title"><i class="fa fa-exclamation-circle"></i>Your title goes here</h4>
+                </div>
+                <div class="modal-body">
+                    Your content goes here
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
 
-    </div>
-        <!-- <div class="container-audio"> -->
-        <!-- </div> -->
+
         
-    </div>
-    
-    
-    <!-- <iframe class="audio" loop autoplay="autoplay" controls="controls" >
-        <source src="alone.mp3"/>
-        
-    </iframe> -->
-   
-        
+    <script>
+            $(window).load(function () {
+                    $('#onload').modal('show');
+                });
+    </script>
 
 </body>
 

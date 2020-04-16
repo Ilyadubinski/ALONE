@@ -281,6 +281,8 @@ a.modal-open {
 .modal-area {
   padding:20px;
   color:#424242;
+  text-align: center;
+  
 
 
 }
@@ -296,7 +298,7 @@ a.modal-open {
   cursor:pointer;
   z-index:+2;
   background:rgba(0,0,0,.3);
-  color:#fff;
+  color:#fff transparent 90%;
   transition:all .5s ease-in-out;
 }
 

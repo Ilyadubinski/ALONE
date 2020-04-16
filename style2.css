@@ -216,6 +216,7 @@ p {
 .modal-area {
   padding:20px;
   color:#424242;
+  text-align: center;
 }
 
 .modal-area input[type="radio"] {
@@ -402,27 +403,7 @@ a.modal-open {
   /* color:#fff; */
   border-radius:4px 4px 0 0;
 }
-.modal-area {
-  padding:20px;
-  color:#424242;
 
-
-}
-
-.modal-area input[type="radio"] {
-  display:none;
-}
-.modal-area label {
-  float:left;
-  display:block;
-  padding:10px 20px;
-  font-weight:700;
-  cursor:pointer;
-  z-index:+2;
-  background:rgba(0,0,0,.3);
-  color:#fff;
-  transition:all .5s ease-in-out;
-}
 
 .about-container {
   position: absolute;
