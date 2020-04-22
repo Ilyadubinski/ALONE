@@ -19,10 +19,12 @@ animation-duration: 20s;
 animation-iteration-count: infinite;
 animation-direction: normal;
 perspective: 1000;
-/* overflow: hidden; */
-
-   background-size: 200px;
+  background-size: 200px;
   width: 100%;
+  left: 0;
+	top: 0;
+	right: 51%;
+	bottom: 51%;
 }
 
 canvas {
@@ -120,9 +122,6 @@ audio {
   bottom: 0; 
 position: fixed; 
 right: 0; 
-  /* background-image: url("2demo4.png"); */
-  /* transform: scale(1.05); */
-  /* padding-bottom: 500px; */
 }
 
 
@@ -151,14 +150,10 @@ right: 0;
     top: 10px;
     right: 200px;
   position: absolute;
-  /* cursor: pointer; */
-  /* text-decoration:none; */
   font-size: 35px;
   color: white;
   font-family: "Quicksand", sans-serif;
-  /* text-decoration:none; */
   font-size: 30px;
-  
 }
 
 
@@ -190,22 +185,14 @@ right: 0;
 
 p {
   margin-bottom:1em;
+  text-align: center;
+  font-weight: bold;
 }
 
 a.modal-open {
   top: 10px;
-   
-    position: absolute;
-  /* display:block; */
-  /* padding:20px; */
+  position: absolute;
   color: white;
-  /* font-weight: bolder; */
-  /* font-weight:bold; */
-  /* margin:50px auto; */
-  /* width:200px; */
-  /* background:#e0e0e0; */
-  /* border-radius:2px; */
-  /* text-align:center; */
   font-family: "Quicksand", sans-serif;
   text-decoration:none;
   font-size: 30px;
@@ -213,7 +200,7 @@ a.modal-open {
 }
 .modal {
   
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.2);
   position:fixed;
   width:100%;
   height:100%;
@@ -223,6 +210,7 @@ a.modal-open {
   transition:all .5s ease-in-out;
   opacity:0;
   z-index:-1;
+  font-weight: bold;
 }
 .modal:target {
   opacity:1;
@@ -234,7 +222,8 @@ a.modal-open {
   top:50%;
   left:50%;
   width:500px;
-  background:#fff;
+  background: transparent;
+  color: aquamarine;
   border-radius:4px;
   transform:translate(-50%, -200%);
   transition:all .5s ease-in-out;
@@ -253,7 +242,7 @@ a.modal-open {
   float:right;
   text-decoration:none;
   /* padding:22px 22px; */
-  color:#424242;
+  color:aquamarine;
   font-weight:800;
   transition:all .5s ease-in-out;
   z-index:+1;
@@ -266,21 +255,16 @@ a.modal-open {
   background:rgba(0,0,0,0.5); */
 }
 .modal-content h3 {
-  
-  /* padding: 5px; */
   display:block;
   text-align:center;
-  /* border-bottom:1px solid #e0e0e0; */
   text-transform:uppercase;
-  color:#424242;
+  color:aquamarine;
   font-weight: 900;
-  /* background:rgba(2,162,239,1); */
-  /* color:#fff; */
   border-radius:4px 4px 0 0;
 }
 .modal-area {
   padding:20px;
-  color:#424242;
+  color:aquamarine;
   text-align: center;
   
 
@@ -317,18 +301,7 @@ a.modal-open {
     left: 100px;
   position: absolute;
   cursor: pointer;
-  /* text-indent: -999999px;
-  height: 40px;
-  width: 40px;
-  background: white; */
-  /* background-image: url("https://img.icons8.com/wired/50/000000/home.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px; */
-  /* border-radius: 14em; */
-  /* align-self: start; */
     color: white;
-  /* font-weight: bolder; */
   font-family: "Quicksand", sans-serif;
   text-decoration:none;
   font-size: 30px;
@@ -348,7 +321,6 @@ a.modal-open {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
-  /* align-self: start; */
 }
 .play {
   
@@ -357,3 +329,11 @@ a.modal-open {
 .pause {
   background-image: url("http://basichow.com/asserts/images/pause.png") !important;
 }
+
+/* .a {
+	left: 0;
+	top: 0;
+	right: 51%;
+	bottom: 51%;
+	background-size: cover;
+} */

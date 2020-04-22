@@ -2,25 +2,18 @@
 <html>
 
 <head>
+    <link rel="shortcut icon" type="image/x-icon" href="flaviconv2.ico">
     <meta charset=UTF-8 />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="playpausbutton.scss" />
-    <!-- <link type="text/css" href="/skin/pink.flag/jplayer.pink.flag.css" rel="stylesheet" />
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="/js/jquery.jplayer.min.js"></script> -->
-
-
+    
     <title>Alone</title>
-    <!--     
-    <iframe src="silence.mp3" allow="autoplay" id="audio"></iframe> -->
 
 </head>
 
 
 <body>
-    <!-- <div class="logo"><a class="alive" href="index.html" style="text-decoration: none;">ARISE</a></div>
-    <div class="logo"><a class='portal'href="spacecloud.html" style="text-decoration: none;">ALIVE</a></div>
-    <div class="logo"><a class="portal" href="portal.html" style="text-decoration: none;">AWAKE</a></div> -->
+
 
     <audio id="track">
         <source src="moonriver(rain).mp3" type="audio/mpeg" />
@@ -52,7 +45,7 @@
         <div class="modal" id="modal">
             <div class="modal-content">
                 <a href="#" class="modal-close" title="Close Modal">X</a>
-                <h3>ALONE</h3>
+                <!-- <h3>ALONE</h3> -->
                 <div class="modal-area">
                     <p>Every passing year, getting shorter</br>
                     You never seem to find the time</br>
@@ -64,36 +57,35 @@
                     Your careless words, there always seems to be more</br>
                     
                     The sun is gone, the time is now</br>
-                    The more of it you have</br>
-                    The less you see</br>
+                    The more of it you have, the less you see</br>
                     Soundless words fill the air</br>
                     You thought you would have had more to say</br>
-                    Now that it’s daytime</br>
-                    But your old words escape you</br>
+                    Now that it’s daytime, but your old words escape you</br>
                     Alive and well too close to tell</br>
                     If this is a new version of the same thing</br>
                     Only one way to find out</br>
-                    Let the wind hit your face</br>
-                    You’re alive and well</br>
+                    Let the wind hit your face, you’re alive and well</br>
                     You’re a stone’s throw away from hell</br>
-                    Alive and Alone</br>
-                    Alive and well</br>
-                    Alone and Aspiring</br>
-                    Aspire for life</br>
-                    That changes with time</br>
-                    Yet remains the same</br>
-                    Is it too much to ask?</br>
-                    That’s what all their faces say</br>
+                    Alive and Alone - Alive and well</br>
+                    Alone and Aspire for life</br>
+                    That changes with time, yet remains the same</br>
+                    Is it too much to ask? That’s what all their faces say</br>
                     Let yourself float through time and space</br>
-                    You’ll come down anyway</br>
-                    At least you’ll have done it</br>
+                    You’ll come down anyway, at least you’ll have done it</br>
                     Your way</br>
                 </p>
                 </div>
             </div>
         </div>
-    
+        <canvas id="nokey" width="800" height="800">
+            Your Browser Don't Support Canvas, Please Download Chrome ^_^``
+        </canvas>
     </div>
+
+    <script>
+        
+    </script>
+    
     
     <script>
         var track = document.getElementById('track');
@@ -103,11 +95,9 @@
             function playPause() {
                 if (track.paused) {
                     track.play();
-                    //controlBtn.textContent = "Pause";
                     controlBtn.className = "pause";
                 } else {
                     track.pause();
-                    //controlBtn.textContent = "Play";
                     controlBtn.className = "play";
                 }
             }
