@@ -4,12 +4,14 @@
 <head>
     <link rel="shortcut icon" type="image/x-icon" href="flaviconv2.ico">
     <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style2.css" />
+    <link rel="stylesheet" type="text/css" href="pstyles.css" />
 
 </head>
 
 <body>
-    <audio id="track">
+    <!-- <audio id="track">
         <source src="inmyroom.mp3" type="audio/mpeg" />
     </audio>
     
@@ -31,7 +33,7 @@
     <div class='about-container'>
         <a class="modal-open" href="#modal">About</a>
 
-    </div>
+    </div> -->
 
 
 <div class="all-modal-stylying">
@@ -78,28 +80,7 @@
 
     
 
-    <script>
-        var track = document.getElementById('track');
-
-        var controlBtn = document.getElementById('play-pause');
-
-        function playPause() {
-            if (track.paused) {
-                track.play();
-                //controlBtn.textContent = "Pause";
-                controlBtn.className = "pause";
-            } else {
-                track.pause();
-                //controlBtn.textContent = "Play";
-                controlBtn.className = "play";
-            }
-        }
-
-        controlBtn.addEventListener("click", playPause);
-        track.addEventListener("ended", function () {
-            controlBtn.className = "play";
-        });
-    </script>
+    
       
     <script src="three.min.js"></script>
     <script src="postprocessing.min.js"></script>
@@ -206,7 +187,177 @@
         }
         init();
     </script>
+
+<body class="particles-body">
+    <!-- particles.js container -->
+    <div id="particles-js">
+
+
+<div id="player-container">
+    <div id="play-pause" class="play">Play
+        
+        <audio id="track">
+            <source src="inmyroom.mp3" type="audio/mpeg" />
+        </audio>
+        </div>
+
+        <script>
+            var track = document.getElementById('track');
+
+            var controlBtn = document.getElementById('play-pause');
+
+            function playPause() {
+                if (track.paused) {
+                    track.play();
+                    //controlBtn.textContent = "Pause";
+                    controlBtn.className = "pause";
+                } else {
+                    track.pause();
+                    //controlBtn.textContent = "Play";
+                    controlBtn.className = "play";
+                }
+            }
+
+            controlBtn.addEventListener("click", playPause);
+            track.addEventListener("ended", function () {
+                controlBtn.className = "play";
+            });
+        </script>
+    </div>
     
+    <div id='back-container'>
+        <a id="back" href="javascript:history.back()" style="text-decoration: none;">Last Page</a>
+    </div>
+    <div id='forward-container'>
+        <a id="forward" href="stormcloud.html" style="text-decoration: none;">Next Page</a>
+    </div>
+    
+    <div id='home-container'>
+        <a id="home" href="index.html" style="text-decoration: none;">Home</a>
+    </div>
+    
+    <div class='about-container'>
+        <a class="modal-open" href="#modal">About</a>
+    
+    </div>
+
+    <script>
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 100,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 6,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "particles-js",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "grab"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+
+
+
+    </script>
+
+    </body>
 </body>
 
 </html>
