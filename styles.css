@@ -330,3 +330,8 @@ a.modal-open {
 	bottom: 51%;
 	background-size: cover;
 } */
+
+canvas {
+    background-color:transparent;
+    position: absolute;
+}
